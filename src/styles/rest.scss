@@ -1,0 +1,352 @@
+@import './variables.scss';
+
+* {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+i {
+  font-style: inherit;
+}
+
+.hover {  
+  &:hover {    
+    color: $color-primary;
+    cursor: pointer;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: none;
+  &:hover {
+    color: $color-primary-hover;
+  }
+
+  &.hover:hover {
+    text-decoration: underline !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.m4 {
+  margin: 4px !important;
+}
+
+.ml4 {
+  margin-left: 4px !important;
+}
+
+.mt4 {
+  margin-top: 4px !important;
+}
+
+.mr4 {
+  margin-right: 4px !important;
+}
+
+.mb4 {
+  margin-bottom: 4px !important;
+}
+
+.mh4 {
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+
+.ml8 {
+  margin-left: 8px !important;
+}
+
+.mr8 {
+  margin-right: 8px !important;
+}
+.mt8 {
+  margin-top: 8px !important;
+}
+
+.mb8 {
+  margin-bottom: 10px;
+}
+
+.mh8 {
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+}
+
+.mr12 {
+  margin-right: 12px !important;
+}
+
+.mb12 {
+  margin-bottom: 12px !important;
+}
+
+.mt12 {
+  margin-top: 12px !important;
+}
+
+.ml16 {
+  margin-left: 16px !important;
+}
+
+.mr16 {
+  margin-right: 16px !important;
+}
+
+.mt16 {
+  margin-top: 16px !important;
+}
+
+.mt64 {
+  margin-top: 64px !important;
+}
+
+.mb16 {
+  margin-bottom: 16px !important;
+}
+
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.ph8 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.p8 {
+  padding: 8px !important;
+}
+
+.p12 {
+  padding: 12px !important;
+}
+
+.pb12 {
+  padding-bottom: 12px !important;
+}
+
+.pb16 {
+  padding-bottom: 16px !important;
+}
+
+.pl16 {
+  padding-left: 16px !important;
+}
+.pr16 {
+  padding-right: 16px !important;
+}
+
+.ph16 {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.pt10 {
+  padding-top: 10px !important;
+}
+
+.full {
+  width: 100% !important;
+}
+
+.flex {
+  display: flex;
+
+  & > * {
+    flex-shrink: 0;
+  }
+
+  & > .full {
+    width: initial!important;
+    flex-grow: 1;   
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.middle {
+    align-items: center;
+  }
+}
+
+.gray {
+  color: #bfbfbf !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.border-right {
+  border-right: 1px solid $color-sub-border;
+}
+
+.block {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inline {
+  display: inline-block !important;
+}
+
+.primary {
+  color: $color-primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.warning {
+  color: $color-warning;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.broder-right {
+  border-right: 1px solid $color-border;
+}
+
+.color {
+  position: relative;
+
+  input:first-child {
+    padding-left: 28px!important;
+  }
+  input[type='color'] {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 20px!important;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+}
+
+.line {
+  display: inline-block;
+  svg {
+    position: relative;
+    top: 2px;
+    height: 18px;
+  }
+
+  .t-icon {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  .ant-select-arrow-icon {
+    svg {
+      top: -4px;
+    }
+  }
+}
+
+.arrow {
+  height: 26px!important;
+
+  .t-icon {
+    font-size: 32px!important;
+    height: 26px!important;
+    display: inline-block;
+  }
+} 
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/*滚动条里面小方块*/
+::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e7e7e7;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+.ant-select-dropdown-menu-item {
+  font-size: 13px !important;
+  width: 100%;
+  svg{
+    width: 100%;
+  }
+}
+
+.ant-modal-body {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.ant-tree-checkbox-indeterminate {
+  .ant-tree-checkbox-inner::after {
+    background-color: white !important;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
